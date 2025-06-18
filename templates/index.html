@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Благотворительность</title>
+</head>
+<body>
+
+    <!-- Главное меню  --> 
+
+    <header>
+<div>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+    </header>
+
+
+    <!-- QR Code  --> 
+
+    <div class="qrcode" id="qrcode">
+
+    </div>
+
+
+
+    <!-- Новости из Telegram  --> 
+
+<div>
+<h1 class="text-red-800">Новости из Телеграм</h1>
+
+<div class="photo-box"> 
+{% if photo_tg %}
+<img src="{{photo_tg}}" alt="Photo is channel">
+{% else %}
+<p>Ошибка на канале, фото не найдено</p>
+{% endif %}
+</div>
+
+</div>
+
+
+    <!-- Подвал сайта  --> 
+
+    <footer>
+
+    </footer>
+
+</body>
+</html>
