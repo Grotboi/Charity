@@ -1,0 +1,49 @@
+<style>
+* {
+    outline: 1px solid red !important;
+    box-sizing: border-box;
+  }
+</style>
+
+  <div class="relative w-full h-64 bg-gray-200">
+  <!-- Основной контент -->
+  <div class="p-4 z-10 relative">Текст под градиентом</div>
+
+  <!-- Градиент поверх всего -->
+  <div 
+    class="absolute inset-0 pointer-events-none"
+    style="
+      background-image: linear-gradient(
+        to bottom,
+        rgba(48, 174, 100, 0.3) 39%,
+        rgba(48, 174, 100, 0.3) 48%,
+        rgba(48, 174, 100, 0.4) 56%,
+        rgba(48, 174, 100, 0.6) 59%,
+        rgba(48, 174, 100, 0.3) 61%,
+        rgba(48, 174, 100, 0.3) 70%,
+        rgba(48, 174, 100, 0.6) 72%,
+        rgba(48, 174, 100, 0.4) 75%,
+        #30AE64 75%
+      );
+    "
+  ></div>
+</div>
+
+
+
+
+<!-- Новости из Telegram  --> 
+
+<div style="top: 1000px; position: relative;" class="mt-20">
+<h1 class="font-bold text-5xl mb-10">Новости</h1>
+
+<div class="photo-box"> 
+{% if photo_tg %}
+<img src="{{photo_tg}}" alt="Photo is channel">
+{% else %}
+<p>Ошибка на канале, фото не найдено</p>
+{% endif %}
+</div>
+
+
+</div>
